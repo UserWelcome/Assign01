@@ -1,0 +1,16 @@
+.table {
+    border: 5px black solid;
+    border-radius: 2px;
+    width: 100%;
+    padding: 5px 5px;
+    margin: 10px 10px;
+
+}
+
+.card{
+    display: block;
+}
+td {
+    border-color: black 5px solid;
+    text-align: center;
+}
