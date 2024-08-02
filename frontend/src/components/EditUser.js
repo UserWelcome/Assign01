@@ -13,7 +13,7 @@ const EditUser = () => {
       
       try {
       
-         const response=await axios.get(`http://localhost:5000/api/auth/added/${id}`)
+         const response=await axios.get(`https://userapp-v8uf.onrender.com/api/auth/added/${id}`)
          console.log(response);
         setFormData({ name:response.data.name, email:response.data.email,  phone:response.data.phone});
       } catch (error) {
@@ -31,7 +31,7 @@ const EditUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-    await axios.put(`http://localhost:5000/api/auth/${id}`, formData);
+    await axios.put(`https://userapp-v8uf.onrender.com/api/auth/${id}`, formData);
      
       alert("user updated");
       navigate('/dashboard');
