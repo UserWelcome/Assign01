@@ -14,7 +14,7 @@ const AddUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/', formData);
+      await axios.post('https://userapp-v8uf.onrender.com/api/auth/', formData);
       navigate('/dashboard');
     } catch (error) {
       alert('Error adding user');
