@@ -12,9 +12,9 @@ const Dashboard = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await axios.get('http://localhost:5000/api/auth/');
+      const response = await axios.get('https://userapp-v8uf.onrender.com/api/auth/');
       setUsers(response.data);
-      const response1 = await axios.get('http://localhost:5000/api/auth/added');
+      const response1 = await axios.get('https://userapp-v8uf.onrender.com/api/auth/added');
       setUserAdded(response1.data);
     };
     fetchUsers();
@@ -51,7 +51,7 @@ const Dashboard = () => {
 
                   </Card.Text>
                   <Button variant="primary" onClick={async () => {
-                    await axios.delete(`http://localhost:5000/api/auth/${user._id}`);
+                    await axios.delete(`https://userapp-v8uf.onrender.com/api/auth/${user._id}`);
                     setUserAdded(userAdded.filter(u => u._id !== user._id));
                   }}>Delete</Button>
                 </Card.Body>
