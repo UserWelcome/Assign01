@@ -34,7 +34,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/signup', formData);
+      await axios.post('https://userapp-v8uf.onrender.com/api/auth/signup', formData);
       alert('Signup successful');
       navigate('/login');
     } catch (error) {
